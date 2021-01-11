@@ -7,6 +7,15 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="./css/bootstrap.css">
+
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+        .nav-item {
+            font-size: 18px;
+            font-family: 'Work Sans', sans-serif;
+            margin-right: 10px;
+        }
+    </style>
 </head>
 <body>
     <!-- jquery -->
@@ -14,13 +23,14 @@
     <!-- java script -->
     <script src="./js/bootstrap.bundle.js"></script>
 
-    <!-- Navigation Bar -->
+        <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand">
             <img src="Resources/securily_logo.png" width="100" height="23" class="d-inline-block align-top" alt="securily_logo">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -37,20 +47,22 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="malwareDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Threats</a>
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Attacks</a>
                     <div class="dropdown-menu" aria-labelledby="malwareDropdown">
-                        <a class="dropdown-item" href="malware.html">Malware</a>
+                        <a class="dropdown-item" href="malware.html">Malware Attacks</a>
+                        <a class="dropdown-item" href="botnet.html">Botnet Attacks</a>
+                        <a class="dropdown-item" href="phishing.html">Phishing Attacks</a>
                         <a class="dropdown-item" href="protection.html">How do I Protect Myself?</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="quizzes.html">Quizzes</a>
+                    <a class="nav-link" href="quiz.html">Knowledge Quiz</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="games.html">Games</a>
+                    <a class="nav-link" href="malicious_or_benign.html">Malicious or Benign?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="learn_more.html">Learn More</a>
+                    <a class="nav-link star" href="learn_more.html">Learn More</a>
                 </li>
             </ul>
         </div>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Securily</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- CSS -->
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <title>Securily</title>
+
     <style>
         @import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
 
@@ -14,30 +14,30 @@
             font-size: 20px;
             font-family: 'Work Sans', sans-serif;
             color: #333;
-          font-weight: 300;
-          text-align: center;
-          background-color: #f8f6f0;
+            font-weight: 300;
+            text-align: center;
+            background-color: #f8f6f0;
         }
         h1{
-          font-weight: 300;
-          margin: 0px;
-          padding: 10px;
-          font-size: 20px;
-          background-color: #444;
-          color: #fff;
+            font-weight: 300;
+            margin: 0px;
+            padding: 10px;
+            font-size: 20px;
+            background-color: #444;
+            color: #fff;
         }
         .question{
-          font-size: 30px;
-          margin-bottom: 10px;
+            font-size: 30px;
+            margin-bottom: 10px;
         }
         .answers {
-          margin-bottom: 20px;
-          text-align: left;
-          display: inline-block;
+            margin-bottom: 20px;
+            text-align: left;
+            display: inline-block;
         }
         .answers label{
-          display: block;
-          margin-bottom: 10px;
+            display: block;
+            margin-bottom: 10px;
         }
         button{
           font-family: 'Work Sans', sans-serif;
@@ -69,8 +69,14 @@
         }
         .quiz-container{
           position: relative;
-          height: 200px;
+          height: 260px;
           margin-top: 40px;
+        }
+
+        .nav-item {
+            font-size: 18px;
+            font-family: 'Work Sans', sans-serif;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -80,13 +86,14 @@
     <!-- java script -->
     <script src="./js/bootstrap.bundle.js"></script>
 
-    <!-- Navigation Bar -->
+        <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand">
             <img src="Resources/securily_logo.png" width="100" height="23" class="d-inline-block align-top" alt="securily_logo">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -103,26 +110,32 @@
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="malwareDropdown" role="button"
-                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Threats</a>
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Attacks</a>
                     <div class="dropdown-menu" aria-labelledby="malwareDropdown">
-                        <a class="dropdown-item" href="malware.html">Malware</a>
+                        <a class="dropdown-item" href="malware.html">Malware Attacks</a>
+                        <a class="dropdown-item" href="botnet.html">Botnet Attacks</a>
+                        <a class="dropdown-item" href="phishing.html">Phishing Attacks</a>
                         <a class="dropdown-item" href="protection.html">How do I Protect Myself?</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="quizzes.html">Quizzes</a>
+                    <a class="nav-link" href="quiz.html">Knowledge Quiz</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="games.html">Games</a>
+                    <a class="nav-link" href="malicious_or_benign.html">Malicious or Benign?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="learn_more.html">Learn More</a>
+                    <a class="nav-link star" href="learn_more.html">Learn More</a>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <h1>Cybersecurity Quiz</h1>
+    <!-- Game -->
+    <h1>Cybersecurity Knowledge Quiz</h1>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped" id="myProgressBar" role="progressbar" style="width: 0%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
     <div class="quiz-container">
         <div id="quiz"></div>
     </div>
@@ -134,41 +147,97 @@
     <script>
         (function(){
             // Variables
+            var currentValue = {
+                value : 0
+            };
             const quizContainer = document.getElementById('quiz');
             const resultsContainer = document.getElementById('results');
             const submitButton = document.getElementById('submit');
             const myQuestions = [
                 {
-                question: "Who invented JavaScript?",
+                question: "What type of attack is designed to hinder the normal operation of a website or other network resource?",
                 answers: {
-                    a: "Douglas Crockford",
-                    b: "Sheryl Sandberg",
-                    c: "Brendan Eich"
-                },
-                correctAnswer: "c"
-                },
-                {
-                question: "Which one of these is a JavaScript package manager?",
-                answers: {
-                    a: "Node.js",
-                    b: "TypeScript",
-                    c: "npm"
-                },
-                correctAnswer: "c"
-                },
-                {
-                question: "Which tool can you use to ensure code quality?",
-                answers: {
-                    a: "Angular",
-                    b: "jQuery",
-                    c: "RequireJS",
-                    d: "ESLint"
+                    a: "DoS attack",
+                    b: "DDoS attack",
+                    c: "Botnet",
+                    d: "Both a & b"
                 },
                 correctAnswer: "d"
+                },
+                {
+                question: "What type of attack involves a group of computers running malicious programs that are remotely controller by cybercrimminals?",
+                answers: {
+                    a: "DoS attack",
+                    b: "DDoS attack",
+                    c: "Botnet attack",
+                    d: "Both a & b"
+                },
+                correctAnswer: "c"
+                },
+                {
+                question: "What type of attack heavily relies on human interaction to manipulate people to make security mistakes or give away sensitive information?",
+                answers: {
+                    a: "Social engineering attack",
+                    b: "Botnet attack",
+                    c: "DDos attack",
+                    d: "Dos attack"
+                },
+                correctAnswer: "a"
+                },
+                {
+                question: "What type of malware accesses a users's computer, encrypts personal files, and demands a payment to decrypt the files?",
+                answers: {
+                    a: "Ransomware",
+                    b: "Spyware",
+                    c: "Trojan Horse",
+                    d: "Phishing"
+                },
+                correctAnswer: "a"
+                },
+                {
+                question: "How can you minimize cybersecurity risks over insecure Wi-Fi networks?",
+                answers: {
+                    a: "Use an incognito window",
+                    b: "Use a Virtual Private Network (VPN)",
+                    c: "Change your laptop password",
+                    d: "Update to the latest version of Windows"
+                },
+                correctAnswer: "b"
                 }
             ];
 
             // Functions
+            function addProgress() {
+                if (currentValue.value !== 100) {
+                    var element = document.getElementById("myProgressBar");
+                    var val = currentValue.value + 20;
+                    currentValue.value = val;
+                    element.style.width = val + '%';
+                    element.innerHTML = val + '%';
+                }
+               }
+
+            function delProgress() {
+                if (currentValue.value !== 100) {
+                    var element = document.getElementById("myProgressBar");
+                    var val = currentValue.value - 20;
+                    currentValue.value = val;
+                    element.style.width = val + '%';
+                    element.innerHTML = val + '%';
+                }
+            }
+
+            function submit() {
+                if (currentValue.value !== 100) {
+                    var element = document.getElementById("myProgressBar");
+                    var val = currentValue.value + 20;
+                    currentValue.value = val;
+                    element.style.backgroundColor = '#4CAF50';
+                    element.style.width = val + '%';
+                    element.innerHTML = val + '%';
+                }
+            }
+
             function buildQuiz(){
                 // variable to store the HTML output
                 const output = [];
@@ -246,7 +315,7 @@
                 } else{
                 previousButton.style.display = 'inline-block';
                 }
-                if(currentSlide === slides.length-1){
+                if(currentSlide === slides.length - 1){
                 nextButton.style.display = 'none';
                 submitButton.style.display = 'inline-block';
                 } else{
@@ -263,7 +332,7 @@
                 showSlide(currentSlide - 1);
             }
 
-            // Kick things off
+            // Build Quiz
             buildQuiz();
 
             // Pagination
@@ -277,8 +346,11 @@
 
             // Event listeners
             submitButton.addEventListener('click', showResults);
-            previousButton.addEventListener("click", showPreviousSlide);
-            nextButton.addEventListener("click", showNextSlide);
+            submitButton.addEventListener('click', submit)
+            previousButton.addEventListener('click', showPreviousSlide);
+            previousButton.addEventListener('click', delProgress)
+            nextButton.addEventListener('click', showNextSlide);
+            nextButton.addEventListener('click', addProgress)
         })();
     </script>
 </body>
