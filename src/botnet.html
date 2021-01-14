@@ -81,192 +81,44 @@
 
     <!-- What is a Botnet Attack? -->
     <h2>What is a Botnet Attack?</h2>
-    <p>Malicious software intended to break into and/or damage a computer system (compromise a system)
-        without the owner’s approval</p>
+    <p>
+        A botnet attack involves a series of hijacked computer systems that serve as a tool to automate mass attacks
+        such as data theft, server crashing, and malware distribution. This allows a hacker to automate large-scaled
+        attacks efficiently with remote commands.
+    </p>
+    <p>
+        A <a class="font-weight-bold">bot herder</a> leads the series of hijacked computer systems with remote commands. Once all the bots have been
+        herded, this allows the hackers attacks to become more efficient.
+    </p>
+    <p>
+        <a class="font-weight-bold">Zombies</a> are the malware-infected devices that operate under the commands of the bot herder. Once these devices
+        are compromised, they are used remotely for malicious tasks.
+    </p>
 
     <!-- Types of Botnet Attacks -->
     <br><h2>Types of Botnet Attacks</h2>
-
-    <!-- Accordion -->
-    <div class="accordion" id="malwareAccordion">
-        <!-- Adware -->
-        <div class="card">
-            <div class="card-header" id="adwareHeading">
-                <h2 class="mb-0">
-                    <a class="collapsed d-block" data-toggle="collapse" data-target="#adwareCollapse">
-                        <i class="fa fa-chevron-down pull-right"></i>
-                        Adware
-                    </a>
-                </h2>
-            </div>
-
-            <div class="collapse" id="adwareCollapse">
-                <div class="card-body">
-                    One of the least risky and most "money spinning" types of malware. Accesses the user's system to
-                    automatically display/play an advertisement.
-                </div>
-            </div>
-        </div>
-
-        <!-- Spyware -->
-        <div class="card">
-            <div class="card-header" id="spywareHeading">
-                <h2 class="mb-0">
-                    <a class="collapsed d-block" data-toggle="collapse" data-target="#spywareCollapse">
-                        <i class="fa fa-chevron-down pull-right"></i>
-                        Spyware
-                    </a>
-                </h2>
-            </div>
-
-            <div class="collapse" id="spywareCollapse">
-                <div class="card-body">
-                    Software used to track users internet activities in order to send advertising like adware back to the
-                    system. Involves the sale of personal data to a third party.
-                </div>
-            </div>
-        </div>
-
-        <!-- Virus -->
-        <div class="card">
-            <div class="card-header" id="virusHeading">
-                <h2 class="mb-0">
-                    <a class="collapsed d-block" data-toggle="collapse" data-target="#virusCollapse">
-                        <i class="fa fa-chevron-down pull-right"></i>
-                        Virus
-                    </a>
-                </h2>
-            </div>
-
-            <div class="collapse" id="virusCollapse">
-                <div class="card-body">
-                    Software that attaches itself to another program, which reproduces itself when the program is run.
-                    Consumes resources, which slows down the computer. Spread by sharing software/files between computers.
-                </div>
-            </div>
-        </div>
-
-        <!-- Worm -->
-        <div class="card">
-            <div class="card-header" id="wormHeading">
-                <h2 class="mb-0">
-                    <a class="collapsed d-block" data-toggle="collapse" data-target="#wormCollapse">
-                        <i class="fa fa-chevron-down pull-right"></i>
-                        Worm
-                    </a>
-                </h2>
-            </div>
-
-            <div class="collapse" id="wormCollapse">
-                <div class="card-body">
-                    “Silently” replicates itself in active memory and destroys all data and files on a computer.
-                    “Eats” the system operating files and other file data.
-                </div>
-            </div>
-        </div>
-
-        <!-- Trojan Horse -->
-        <div class="card">
-            <div class="card-header" id="trojanHeading">
-                <h2 class="mb-0">
-                    <a class="collapsed d-block" data-toggle="collapse" data-target="#trojanCollapse">
-                        <i class="fa fa-chevron-down pull-right"></i>
-                        Trojan Horse
-                    </a>
-                </h2>
-            </div>
-
-            <div class="collapse" id="trojanCollapse">
-                <div class="card-body">
-                    One of the most dangerous types of malware that have an “advertised” use with a hidden ability.
-                    Discovers crucial information or accessibility to the computer system. The user must download and
-                    install software in order to get a trojan horse.
-                </div>
-            </div>
-        </div>
-
-        <!-- Backdoor -->
-        <div class="card">
-            <div class="card-header" id="backdoorHeading">
-                <h2 class="mb-0">
-                    <a class="collapsed d-block" data-toggle="collapse" data-target="#backdoorCollapse">
-                        <i class="fa fa-chevron-down pull-right"></i>
-                        Backdoor
-                    </a>
-                </h2>
-            </div>
-
-            <div class="collapse" id="backdoorCollapse">
-                <div class="card-body">
-                    A “backdoor” into a computer, which quietly provides a network connection for other hackers or
-                    malware for viruses or spam. Hides certain access from the user.
-                </div>
-            </div>
-        </div>
-
-        <!-- Rootkit -->
-        <div class="card">
-            <div class="card-header" id="rootkitHeading">
-                <h2 class="mb-0">
-                    <a class="collapsed d-block" data-toggle="collapse" data-target="#rootkitCollapse">
-                        <i class="fa fa-chevron-down pull-right"></i>
-                        Rootkit
-                    </a>
-                </h2>
-            </div>
-
-            <div class="collapse" id="rootkitCollapse">
-                <div class="card-body">
-                    The least detectable type of malicious software, making it the hardest to remove. Serves for
-                    evidence removal which can sanitize logs, remove timestamps, install backdoors, mask files and
-                    processes… etc.
-                </div>
-            </div>
-        </div>
-
-        <!-- Keylogging -->
-        <div class="card">
-            <div class="card-header" id="keyloggingHeading">
-                <h2 class="mb-0">
-                    <a class="collapsed d-block" data-toggle="collapse" data-target="#keyloggingCollapse">
-                        <i class="fa fa-chevron-down pull-right"></i>
-                        Keylogging
-                    </a>
-                </h2>
-            </div>
-
-            <div class="collapse" id="keyloggingCollapse">
-                <div class="card-body">
-                    A spy software that captures all keystrokes on a computer. Records passwords, credit card
-                    information, and other sensitive information. Usually transmitted to a file/server for reading use later.
-                </div>
-            </div>
-        </div>
-
-        <!-- ransomware -->
-        <div class="card">
-            <div class="card-header" id="ransomwareHeading">
-                <h2 class="mb-0">
-                    <a class="collapsed d-block" data-toggle="collapse" data-target="#ransomwareCollapse">
-                        <i class="fa fa-chevron-down pull-right"></i>
-                        Ransomware
-                    </a>
-                </h2>
-            </div>
-
-            <div class="collapse" id="ransomwareCollapse">
-                <div class="card-body">
-                    Restricts the user’s access until a ransom is paid. Encrypts the victims files and demands the sum
-                    of money to be paid to decrypt the files. Typically use a trojan to enter a system.
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Botnet -->
-    <p>Botnet: A collection of internet connected programs communicating with each other to perform a task.
-    All infected systems are typically under control by a single system
-    Tasks include: spam and malware delivery
+    <p>
+        <a class="font-weight-bold">Distributed Denial of Service (DDoS)</a> is an attack based on overloading a server with internet traffic, which
+        often makes a server unavailable for a period of time. Most often, zombie computers are tasked with bombarding
+        online services with data packets or web requests.
     </p>
+    <p>
+        <a class="font-weight-bold">Phishing</a> is an attack which targets individuals by imitating a legitimate institution to gather valuable
+        information. This information includes gaining network access, installing malware, or gaining other valuable
+        user information like banking logins.
+    </p>
+    <a>
+        <a class="font-weight-bold">Brute force</a> attacks run programs that are designed to breach web accounts by force. By using dictionary attacks
+        and credential stuffing to exploit user's weak passwords, bots can access valuable user data.
+    </p>
+
+    <!-- Why are Botnets Used? -->
+    <br><h2>Why are Botnets Used?</h2>
+    <ul>
+        <li>Financial Theft</li>
+        <li>Data Theft</li>
+        <li>Service Sabotage</li>
+        <li>Cryptocurrency Scams</li>
+    </ul>
 </body>
 </html>
