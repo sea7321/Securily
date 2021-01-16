@@ -49,6 +49,7 @@
             padding: 20px;
             cursor: pointer;
             margin-bottom: 20px;
+            margin-top: 300px;
         }
         button:hover{
             background-color: #38a;
@@ -63,10 +64,12 @@
           opacity: 0;
           transition: opacity 0.5s;
         }
+
         .active-slide{
           opacity: 1;
           z-index: 2;
         }
+
         .quiz-container{
           position: relative;
           height: 200px;
@@ -86,7 +89,7 @@
     <!-- java script -->
     <script src="./js/bootstrap.bundle.js"></script>
 
-    <!-- Navigation Bar -->
+        <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand">
             <img src="Resources/securily_logo.png" width="100" height="23" class="d-inline-block align-top" alt="securily_logo">
@@ -125,7 +128,7 @@
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Games</a>
                     <div class="dropdown-menu" aria-labelledby="gameDropdown">
                         <a class="dropdown-item" href="malicious_or_benign.html">Malicious or Benign?</a>
-                        <a class="dropdown-item" href="spot_the_phish.html">Spot the Phish</a>
+                        <a class="dropdown-item" href="go_phish.html">Go Phish!</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -142,7 +145,7 @@
     </nav>
 
     <!-- Game -->
-    <h1>Malicious or Benign?</h1>
+    <h1>Go Phish</h1>
     <div class="progress">
       <div class="progress-bar progress-bar-striped" id="myProgressBar" role="progressbar" style="width: 0%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
@@ -150,8 +153,8 @@
         <div id="quiz"></div>
     </div>
     <button id="previous">Previous Question</button>
-    <button id="next">Next Question</button>
-    <button id="submit">Submit Quiz</button>
+    <button id="next">Go Phish</button>
+    <button id="submit">Submit</button>
     <div id="results"></div>
 
     <script>
@@ -165,69 +168,69 @@
             const submitButton = document.getElementById('submit');
             const myQuestions = [
                 {
-                    question: "diya.org.pk/wp-includes/images/media/vital/vital/file/",
+                    question: "<img src='Resources/monro.PNG' width='800' height='375' alt='monro'>",
                     answers: {
-                        a: "Malicious",
-                        b: "Benign",
-                    },
-                    correctAnswer: "a"
-                },
-                {
-                    question: "cdn2.hubspot.net/hubfs/167521/2015/new-home/twitter-footer.png?t=1462394110869",
-                    answers: {
-                        a: "Malicious",
-                        b: "Benign",
+                        a: "Phish",
+                        b: "No Phish",
                     },
                     correctAnswer: "b"
                 },
                 {
-                    question: "aqualeasing.ru/libraries/cms/usaa/logind.php",
+                    question: "<img src='Resources/hotels' width='500' height='375' alt='hotels'>",
                     answers: {
-                        a: "Malicious",
-                        b: "Benign",
+                        a: "Phish",
+                        b: "No Phish",
                     },
                     correctAnswer: "a"
                 },
                 {
-                    question: "sort.veritas.com/patch/detail/11325",
+                    question: "<img src='Resources/teepee.png' width='325' height='375' alt='teepee'>",
                     answers: {
-                        a: "Malicious",
-                        b: "Benign",
+                        a: "Phish",
+                        b: "No Phish",
                     },
                     correctAnswer: "b"
                 },
                 {
-                    question: "124.248.205.19/exec/1201310150305199889.exe",
+                    question: "<img src='Resources/costco' width='600' height='375' alt='costco'>",
                     answers: {
-                        a: "Malicious",
-                        b: "Benign",
+                        a: "Phish",
+                        b: "No Phish",
                     },
                     correctAnswer: "a"
                 },
                 {
-                    question: "c2el3at.com/sgproducciones/mgs/es/",
+                    question: "<img src='Resources/tax.png' width='325' height='375' alt='tax'>",
                     answers: {
-                        a: "Malicious",
-                        b: "Benign",
+                        a: "Phish",
+                        b: "No Phish",
                     },
                     correctAnswer: "a"
                 },
                 {
-                    question: "www.food.com/recipe/contest-winner-blender-tomato-or-mango-salsa-423306",
+                    question: "<img src='Resources/email.png' width='533' height='298' alt='email'>",
                     answers: {
-                        a: "Malicious",
-                        b: "Benign",
+                        a: "Phish",
+                        b: "No Phish",
+                    },
+                    correctAnswer: "a"
+                },
+                {
+                    question: "<img src='Resources/shareCrate.png' width='325' height='375' alt='shareCrate'>",
+                    answers: {
+                        a: "Phish",
+                        b: "No Phish",
                     },
                     correctAnswer: "b"
                 },
                 {
-                    question: "ir.voanews.com/img/sprites/icons_arrows_rtl.png?v=__7.9.0.0.15",
+                    question: "<img src='Resources/bestBuy.png' width='400' height='375' alt='bestBuy'>",
                     answers: {
-                        a: "Malicious",
-                        b: "Benign",
+                        a: "Phish",
+                        b: "No Phish",
                     },
-                    correctAnswer: "b"
-                }
+                    correctAnswer: "a"
+                },
             ];
 
             // Functions
